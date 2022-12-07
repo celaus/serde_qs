@@ -189,7 +189,7 @@ pub fn from_str<'de, T: de::Deserialize<'de>>(input: &'de str) -> Result<T> {
 /// A deserializer for the querystring format.
 ///
 /// Supported top-level outputs are structs and maps.
-pub(crate) struct QsDeserializer<'a> {
+pub struct QsDeserializer<'a> {
     iter: IntoIter<Cow<'a, str>, Level<'a>>,
     value: Option<Level<'a>>,
 }
